@@ -1,6 +1,5 @@
 import logo from './logo.svg';
 import './App.css';
-import './Navbar'
 import email_icon from '../src/Assets/email.png';
 import password_icon from '../src/Assets/password.png';
 import person_icon from '../src/Assets/person.png';
@@ -9,7 +8,7 @@ import Navbar from './Navbar';
 function App() {
   return (
     <div className='nav'>
-      <Navbar /> 
+      {/* <Navbar />  */}
       <div className="container">
         <div className="header">
           <div className="text">Sign Up</div>
