@@ -1,0 +1,67 @@
+import { useEffect, useRef, useState } from "react";
+import "./App.css";
+
+function App() {
+  const [count, setCount] = useState(0);
+  const [preCount, setPreCount] = useState(0);
+
+  const inputRef = useRef(null);
+
+  function handleClick() {
+    inputRef.current.style.padding = "10px";
+    inputRef.current.style.backgroundColor = "yellow";
+  }
+
+  useEffect(() => {
+    if (count > preCount) {
+      console.log("Value Incremented");
+    } else if (count < preCount) {
+      console.log("Value Decremented");
+    }
+    setPreCount(count);
+  }, [preCount, count]);
+
+  let increment = () => {
+    setCount(count + 1);
+  };
+
+  let decrement = () => {
+    setCount(count - 1);
+  };
+
+  return (
+    <div>
+      <div className="navbar">
+        <h2>Softroniics</h2>
+        <nav>
+          <ul>
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="#login">Login</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+      <div className="counter">
+        <button onClick={increment}>+</button>&nbsp;&nbsp;
+        <h1>{count}</h1>&nbsp;&nbsp;
+        <button onClick={decrement}>-</button>
+      </div>
+      <div>
+        <input type="text" ref={inputRef} />
+        &nbsp;&nbsp;&nbsp;
+        <button onClick={handleClick}>Click</button>
+      </div>
+    </div>
+  );
+}
+
+export default App;

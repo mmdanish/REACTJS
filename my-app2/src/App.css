@@ -1,0 +1,50 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 20px 10px 0;
+  background-color: silver;
+  align-items: center;
+}
+
+nav {
+  display: flex;
+  float: right;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 20px;
+  margin-right: 50px;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+h2 {
+  margin-left: 60px;
+  display: inline;
+  margin-top: px;
+}
+
+button {
+  padding: 5px 10px 5px 10px;
+  text-align: center;
+  font-weight: bold;
+  border-radius: 50px;
+  border: 1px solid silver;
+}
+
+.counter {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 15px;
+}
