@@ -1,37 +1,42 @@
-import { useEffect, useRef, useState } from "react";
+// import { useEffect, useRef, useState } from "react";
 import "./App.css";
+// import { Cars } from "./components/Cars";
+import Forms from "./components/Forms";
+// import Keys from "./components/Keys";
 
 function App() {
-  const [count, setCount] = useState(0);
-  const [preCount, setPreCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  // const [preCount, setPreCount] = useState(0);
 
-  const inputRef = useRef(null);
+  // const inputRef = useRef(null);
 
-  function handleClick() {
-    inputRef.current.style.padding = "10px";
-    inputRef.current.style.backgroundColor = "yellow";
-  }
+  // function handleClick() {
+  //   inputRef.current.style.backgroundColor = "Red";
+  //   inputRef.current.style.padding = "10px"
+  // }
 
-  useEffect(() => {
-    if (count > preCount) {
-      console.log("Value Incremented");
-    } else if (count < preCount) {
-      console.log("Value Decremented");
-    }
-    setPreCount(count);
-  }, [preCount, count]);
+  // useEffect(() => {
+  //   if (count > preCount) {
+  //     console.log("Value Incremented");
+  //   } else if (count < preCount) {
+  //     console.log("Value Decremented");
+  //   }
+  //   setPreCount(count);
+  // }, [preCount, count]);
 
-  let increment = () => {
-    setCount(count + 1);
-  };
+  // let increment = () => {
+  //   setCount(count + 1);
+  // };
 
-  let decrement = () => {
-    setCount(count - 1);
-  };
+  // let decrement = () => {
+  //   if (count !== 0) {
+  //     setCount(count - 1);
+  //   }
+  // };
 
   return (
     <div>
-      <div className="navbar">
+      {/* <div className="navbar">
         <h2>Softroniics</h2>
         <nav>
           <ul>
@@ -59,6 +64,11 @@ function App() {
         <input type="text" ref={inputRef} />
         &nbsp;&nbsp;&nbsp;
         <button onClick={handleClick}>Click</button>
+      </div> */}
+      <div>
+        {/* <Keys /> */}
+        {/* <Cars /> */}
+        <Forms />
       </div>
     </div>
   );
