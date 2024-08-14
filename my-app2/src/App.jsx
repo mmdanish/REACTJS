@@ -1,7 +1,8 @@
 // import { useEffect, useRef, useState } from "react";
 import "./App.css";
 // import { Cars } from "./components/Cars";
-import Forms from "./components/Forms";
+// import Forms from "./components/Forms";
+import StudentReg from "./components/StudentReg";
 // import Keys from "./components/Keys";
 
 function App() {
@@ -68,7 +69,8 @@ function App() {
       <div>
         {/* <Keys /> */}
         {/* <Cars /> */}
-        <Forms />
+        {/* <Forms /> */}
+        <StudentReg />
       </div>
     </div>
   );
