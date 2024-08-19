@@ -1,9 +1,12 @@
 // import { useEffect, useRef, useState } from "react";
-import "./App.css";
+// import "./App.css";
 // import { Cars } from "./components/Cars";
 // import Forms from "./components/Forms";
-import StudentReg from "./components/StudentReg";
+// import StudentReg from "./components/StudentReg";
 // import Keys from "./components/Keys";
+
+// import PropDatas from "./components/PropDatas";
+import ChildA from "./components/useContext/ChildA";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -70,7 +73,9 @@ function App() {
         {/* <Keys /> */}
         {/* <Cars /> */}
         {/* <Forms /> */}
-        <StudentReg />
+        {/* <StudentReg /> */}
+        {/* <PropDatas /> */}
+        <ChildA name={"hello"} />
       </div>
     </div>
   );
