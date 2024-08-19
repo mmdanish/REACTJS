@@ -5,8 +5,10 @@
 // import StudentReg from "./components/StudentReg";
 // import Keys from "./components/Keys";
 
+import Product from "./components/Products/Product";
+
 // import PropDatas from "./components/PropDatas";
-import ChildA from "./components/useContext/ChildA";
+// import ChildA from "./components/useContext/ChildA";
 
 function App() {
   // const [count, setCount] = useState(0);
@@ -75,7 +77,8 @@ function App() {
         {/* <Forms /> */}
         {/* <StudentReg /> */}
         {/* <PropDatas /> */}
-        <ChildA name={"hello"} />
+        {/* <ChildA name={"hello"} /> */}
+        <Product />
       </div>
     </div>
   );

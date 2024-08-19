@@ -1,5 +1,5 @@
 import React from 'react'
-import Propss from './Prop'
+import Prop from './Prop'
 
 function PropDatas() {
     const employee = [{
@@ -20,7 +20,7 @@ function PropDatas() {
       {employee.map((obj, index)=>{
         return(
             <>
-                <Propss key={index} name={obj.name} role={obj.role} />
+                <Prop key={index} name={obj.name} role={obj.role} />
             </>
         )
       })}
