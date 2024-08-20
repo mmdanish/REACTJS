@@ -4,8 +4,12 @@
 // import Forms from "./components/Forms";
 // import StudentReg from "./components/StudentReg";
 // import Keys from "./components/Keys";
+// import Product from "./components/Products/Product";
 
-import Product from "./components/Products/Product";
+import Header from "./components/useContext/Header";
+import Layout from "./components/useContext/Layout";
+import ThemeProvider from "./components/useContext/ThemeProvider";
+
 
 // import PropDatas from "./components/PropDatas";
 // import ChildA from "./components/useContext/ChildA";
@@ -72,13 +76,14 @@ function App() {
         <button onClick={handleClick}>Click</button>
       </div> */}
       <div>
-        {/* <Keys /> */}
-        {/* <Cars /> */}
-        {/* <Forms /> */}
-        {/* <StudentReg /> */}
-        {/* <PropDatas /> */}
-        {/* <ChildA name={"hello"} /> */}
-        <Product />
+        {/* <Product /> */}
+
+        {/* Wrapping other components into themeContext */}
+        <ThemeProvider>
+          <Header />
+          <Layout />
+        </ThemeProvider>
+        
       </div>
     </div>
   );
