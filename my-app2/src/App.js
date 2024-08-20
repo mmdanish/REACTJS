@@ -1,15 +1,18 @@
 // import { useEffect, useRef, useState } from "react";
-// import "./App.css";
+import "./App.css";
 // import { Cars } from "./components/Cars";
 // import Forms from "./components/Forms";
 // import StudentReg from "./components/StudentReg";
 // import Keys from "./components/Keys";
 // import Product from "./components/Products/Product";
 
-import Header from "./components/useContext/Header";
-import Layout from "./components/useContext/Layout";
-import ThemeProvider from "./components/useContext/ThemeProvider";
+import CartProvider from "./components/ContextTask/contexts/CartProvider";
+import Navbar from "./components/ContextTask/NavBar/Navbar";
+import ProductList from "./components/ContextTask/ProductList/ProductList";
 
+// import Header from "./components/useContext/Header";
+// import Layout from "./components/useContext/Layout";
+// import ThemeProvider from "./components/useContext/ThemeProvider";
 
 // import PropDatas from "./components/PropDatas";
 // import ChildA from "./components/useContext/ChildA";
@@ -79,11 +82,15 @@ function App() {
         {/* <Product /> */}
 
         {/* Wrapping other components into themeContext */}
-        <ThemeProvider>
+        {/* <ThemeProvider>
           <Header />
           <Layout />
-        </ThemeProvider>
-        
+        </ThemeProvider> */}
+
+        <CartProvider>
+          <Navbar />
+          <ProductList />
+        </CartProvider>
       </div>
     </div>
   );
