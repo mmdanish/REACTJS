@@ -1,10 +1,15 @@
 // import { useEffect, useRef, useState } from "react";
 import "./App.css";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Navbar from "./components/Routing/Navbar";
-import Home from "./components/Routing/Home";
-import About from "./components/Routing/About";
-import Contact from "./components/Routing/Contact";
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Navbar from "./components/RountingTask/Navbar/Navbar";
+import HomePage from "./components/RountingTask/HomePage/HomePage";
+import AboutPage from "./components/RountingTask/AboutPage/AboutPage";
+import ShopPage from "./components/RountingTask/ShopPage/ShopPage";
+// import { BrowserRouter, Routes, Route } from "react-router-dom";
+// import Navbar from "./components/Routing/Navbar";
+// import Home from "./components/Routing/Home";
+// import About from "./components/Routing/About";
+// import Contact from "./components/Routing/Contact";
 // import { Cars } from "./components/Cars";
 // import Forms from "./components/Forms";
 // import StudentReg from "./components/StudentReg";
@@ -98,14 +103,25 @@ function App() {
         </CartProvider> */}
 
         {/* Routing */}
-        <BrowserRouter>
+        {/* <BrowserRouter>
             <Navbar />
           <Routes>
             <Route path='/' element = {<Home/>}></Route>
             <Route path='/about' element = {<About/>}></Route>
             <Route path='/contact' element = {<Contact/>}></Route>
           </Routes>
-        </BrowserRouter>
+        </BrowserRouter> */}
+
+        {/* RoutingTask */}
+        <Router>
+          <Navbar />
+          <Routes>
+            <Route path="/" element = {<HomePage/>}></Route>
+            <Route path="/about" element={<AboutPage />} />
+            <Route path="/shop" element={<ShopPage />} />
+          </Routes>
+        </Router>
+
           
       </div>
     </div>

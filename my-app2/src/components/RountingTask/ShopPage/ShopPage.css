@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+}
+.app {
+  display: flex;
+  margin-left: 220px; /* Add margin to the left to account for the fixed sidebar width /
+    padding: 20px;
+    margin-top: 60px;
+  }
+
+  .sidebar {
+    position: fixed;
+      top: 60px; / This should match the height of the navbar /
+      left: 0;
+      width: 200px;
+      height: calc(100vh - 60px); / Subtract the navbar height from the viewport height /
+      padding: 80px;
+      font-size: large;
+      overflow-y: auto; / Add scrolling if the sidebar content is long */
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.sidebar h3 {
+  margin: 20px 0 10px;
+  font-size: larger;
+}
+
+.sidebar p {
+  margin: 0;
+  cursor: pointer;
+}
+
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 100%;
+  padding: 20px;
+}
+.product-section {
+  width: 80%;
+  padding: 20px;
+}
+.section-heading {
+  text-align: left;
+  padding-left: 60px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-weight: bold;
+}
+
+.product-card {
+  width: 300px;
+  margin: 20px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 10px;
+  text-align: left;
+  cursor: pointer;
+  border-bottom: 1px solid black;
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 5px;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+
+.product-card p {
+  margin: 10px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  opacity: 75%;
+}
+
+.price {
+  font-weight: bold;
+  color: black;
+  font-size: larger;
+}
