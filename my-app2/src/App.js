@@ -1,14 +1,19 @@
 // import { useEffect, useRef, useState } from "react";
 import "./App.css";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Navbar from "./components/Routing/Navbar";
+import Home from "./components/Routing/Home";
+import About from "./components/Routing/About";
+import Contact from "./components/Routing/Contact";
 // import { Cars } from "./components/Cars";
 // import Forms from "./components/Forms";
 // import StudentReg from "./components/StudentReg";
 // import Keys from "./components/Keys";
 // import Product from "./components/Products/Product";
 
-import CartProvider from "./components/ContextTask/contexts/CartProvider";
-import Navbar from "./components/ContextTask/NavBar/Navbar";
-import ProductList from "./components/ContextTask/ProductList/ProductList";
+// import CartProvider from "./components/ContextTask/contexts/CartProvider";
+// import Navbar from "./components/ContextTask/NavBar/Navbar";
+// import ProductList from "./components/ContextTask/ProductList/ProductList";
 
 // import Header from "./components/useContext/Header";
 // import Layout from "./components/useContext/Layout";
@@ -87,10 +92,21 @@ function App() {
           <Layout />
         </ThemeProvider> */}
 
-        <CartProvider>
+        {/* <CartProvider>
           <Navbar />
           <ProductList />
-        </CartProvider>
+        </CartProvider> */}
+
+        {/* Routing */}
+        <BrowserRouter>
+            <Navbar />
+          <Routes>
+            <Route path='/' element = {<Home/>}></Route>
+            <Route path='/about' element = {<About/>}></Route>
+            <Route path='/contact' element = {<Contact/>}></Route>
+          </Routes>
+        </BrowserRouter>
+          
       </div>
     </div>
   );
