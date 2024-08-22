@@ -1,11 +1,11 @@
 .home-page {
-  background-image: url("https://commercejs-demo-store.netlify.app/images/home-4.jpg"); /* Replace with the actual path to your image */
+  background-image: url("https://commercejs-demo-store.netlify.app/images/home-4.jpg"); 
   background-size: cover;
   background-position: center;
   min-height: 100vh;
-  color: #fff; /* Set text color to white */
+  color: #fff; 
   text-align: center;
-  padding: 50px; /* Adjust padding as needed */
+  padding: 50px; 
 }
 
 .home-page h1 {

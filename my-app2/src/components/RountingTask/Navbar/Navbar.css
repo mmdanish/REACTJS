@@ -1,7 +1,7 @@
 .navbar {
-  background-color: transparent; /* Make the navbar transparent */
+  background-color: transparent; 
   display: flex;
-  justify-content: space-between; /* Align elements to the left and right */
+  justify-content: space-between;
   align-items: center;
   padding: 10px;
 }
@@ -17,5 +17,5 @@
 
 .navbar a {
   text-decoration: none;
-  color: #555; /* Set text color to white */
+  color: #555; 
 }

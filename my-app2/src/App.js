@@ -116,7 +116,7 @@ function App() {
         <Router>
           <Navbar />
           <Routes>
-            <Route path="/" element = {<HomePage/>}></Route>
+            <Route path="/" element = {<HomePage />}></Route>
             <Route path="/about" element={<AboutPage />} />
             <Route path="/shop" element={<ShopPage />} />
           </Routes>

@@ -4,7 +4,7 @@ function AboutPage() {
   return (
     <div className="about-page">
       <h1>Commerce.js Demo Store</h1>
-      <p>
+      <p className="para">
         This is an open source storefront built using Chec's headless
         architecture and the Commerce.js SDK. Commerce.js is a smarter, more
         efficient way to build eCommerce projects, and we hope you can see that
