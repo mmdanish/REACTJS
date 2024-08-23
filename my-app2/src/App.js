@@ -11,6 +11,8 @@ import Home from "./components/Routing/Home";
 import About from "./components/Routing/About";
 import Contact from "./components/Routing/Contact";
 import Memo from "./components/Memo";
+import FetchData from "./components/FetchData/FetchData";
+import Axios from "./components/FetchData/Axios";
 // import { Cars } from "./components/Cars";
 // import Forms from "./components/Forms";
 // import StudentReg from "./components/StudentReg";
@@ -111,6 +113,8 @@ function App() {
             <Route path='/about' element = {<About/>}></Route>
             <Route path='/contact' element = {<Contact/>}></Route>
             <Route path='/memo' element = {<Memo/>}></Route>
+            <Route path="/fetch" element = {<FetchData/>}></Route>
+            <Route path="/axios" element = {<Axios/>}></Route>
           </Routes>
         </BrowserRouter>
 
