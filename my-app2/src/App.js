@@ -13,6 +13,7 @@ import Contact from "./components/Routing/Contact";
 import Memo from "./components/Memo";
 import FetchData from "./components/FetchData/FetchData";
 import Axios from "./components/FetchData/Axios";
+import Users from "./components/FetchData/Users";
 // import { Cars } from "./components/Cars";
 // import Forms from "./components/Forms";
 // import StudentReg from "./components/StudentReg";
@@ -115,6 +116,7 @@ function App() {
             <Route path='/memo' element = {<Memo/>}></Route>
             <Route path="/fetch" element = {<FetchData/>}></Route>
             <Route path="/axios" element = {<Axios/>}></Route>
+            <Route path="/users" element = {<Users/>}></Route>
           </Routes>
         </BrowserRouter>
 
