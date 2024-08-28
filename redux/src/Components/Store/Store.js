@@ -1,8 +1,9 @@
 // import CounterSlice from "../CounterSlice/CounterSlice";
 // import ThemeSlice from "../ThemeChanger/ThemeSlice/ThemeSlice";
+// import FormSlice from "../Form/FormSlice";
 
 import { configureStore } from "@reduxjs/toolkit";
-import FormSlice from "../Form/FormSlice";
+import usersSlice from "../AddUser/usersSlice";
 
 //Counter -------------------------------------
 // const store = configureStore({
@@ -21,9 +22,18 @@ import FormSlice from "../Form/FormSlice";
     
 
 //Form -------------------------------------
+// const store = configureStore({
+//   reducer: {
+//     form: FormSlice,
+//   }
+// })
+
+
+
+//Add User -------------------------------------
 const store = configureStore({
   reducer: {
-    form: FormSlice,
+    users: usersSlice,
   }
 })
 
