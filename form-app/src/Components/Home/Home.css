@@ -1,0 +1,25 @@
+
+.table {
+    margin-top: 20px;          
+    text-align: center;        
+}
+
+.table th, .table td {
+    vertical-align: middle;    
+}
+
+.btn-primary, .btn-danger {
+    margin-top: 5px;
+}
+
+.button-wrapper {
+    display: flex;
+    justify-content: flex-end; 
+    margin-bottom: 20px;       
+}
+
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+}
