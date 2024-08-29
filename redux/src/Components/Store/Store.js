@@ -3,7 +3,8 @@
 // import FormSlice from "../Form/FormSlice";
 
 import { configureStore } from "@reduxjs/toolkit";
-import usersSlice from "../AddUser/usersSlice";
+import userSlice from "../CRUD/userSlice";
+
 
 //Counter -------------------------------------
 // const store = configureStore({
@@ -33,7 +34,7 @@ import usersSlice from "../AddUser/usersSlice";
 //Add User -------------------------------------
 const store = configureStore({
   reducer: {
-    users: usersSlice,
+    users: userSlice,
   }
 })
 
