@@ -16,7 +16,7 @@ function Home() {
 
   return (
     <div className="container">
-      <h2 className="text-center">
+      <h2 className="text-center mt-3">
         <u>Crud App with JSON server</u>
       </h2>
       <Link to="/create">
@@ -32,20 +32,31 @@ function Home() {
           </tr>
         </thead>
         <tbody>
-          {users.map((user, index) => (
-            <tr key={index}>
-              <td>{user.id}</td>
-              <td>{user.name}</td>
-              <td>{user.email}</td>
-              <Button className="m-2 btn-primary">Edit</Button>
-              <Button
-                className="m-2 btn-danger"
-                onClick={() => handleDelete(user.id)}
-              >
-                Delete
-              </Button>
+          {Array.isArray(users) && users.length > 0 ? (
+            users.map((user, index) => (
+              <tr key={index}>
+                <td>{user.id}</td>
+                <td>{user.name}</td>
+                <td>{user.email}</td>
+                <td>
+                  <Link to={`/edit/${user.id}`}>
+                    <Button variant="outline-primary" className="m-2">Edit</Button>
+                  </Link>
+                  <Button
+                    variant="outline-danger"
+                    className="m-2"
+                    onClick={() => handleDelete(user.id)}
+                  >
+                    Delete
+                  </Button>
+                </td>
+              </tr>
+            ))
+          ) : (
+            <tr>
+              <td colSpan="4">No Users found.</td>
             </tr>
-          ))}
+          )}
         </tbody>
       </table>
     </div>

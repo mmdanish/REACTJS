@@ -75,6 +75,7 @@ import React from 'react'
 import { Route, BrowserRouter, Routes } from "react-router-dom";
 import Home from './Components/CRUD/Home'
 import Create from './Components/CRUD/Create';
+import Edit from './Components/CRUD/Edit';
 
 function App() {
   return (
@@ -83,6 +84,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}></Route>
         <Route path='/create' element={<Create/>}></Route>
+        <Route path='/edit/:id' element={<Edit/>}></Route>
       </Routes>
       </BrowserRouter>
     </div>
