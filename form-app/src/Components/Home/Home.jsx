@@ -38,11 +38,11 @@ const Home = () => {
                   <td>{user.email}</td>
                   <td>{user.contact}</td>
                   <td className="action-buttons">
-                    <Button variant="primary" className="m-2">
-                      Edit
-                    </Button>
+                  <Link to={`/edit/${user.id}`}>
+                    <Button variant="outline-primary" className="m-2">Edit</Button>
+                  </Link>
                     <Button
-                      variant="danger"
+                      variant="outline-danger"
                       className="m-2"
                       onClick={() => handleDelete(user.id)}
                     >
