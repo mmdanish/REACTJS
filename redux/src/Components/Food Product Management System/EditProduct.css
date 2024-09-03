@@ -1,0 +1,47 @@
+/* Animate the form on page load */
+@keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .container {
+    animation: slideIn 0.5s ease-in-out;
+  }
+  
+  /* Add some padding to the form fields */
+  .form-control {
+    padding: 10px;
+  }
+  
+  /* Style the buttons */
+  .btn {
+    transition: all 0.3s ease;
+  }
+  
+  .btn:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Add focus effect to inputs */
+  .form-control:focus {
+    border-color: #28a745;
+    box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
+  }
+  
+  /* Style the form labels */
+  .form-label {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  /* Shadow effect for form container */
+  .shadow {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  

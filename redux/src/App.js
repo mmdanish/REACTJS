@@ -7,25 +7,23 @@
 // import Theme from "./Components/ThemeChanger/Theme";
 
 // function App() {
-  // const { name, email, password } = useSelector((state) => state.form);
-  // return (
-  //   <div className="App">
-      // {/* <Counter /> */}
+// const { name, email, password } = useSelector((state) => state.form);
+// return (
+//   <div className="App">
+// {/* <Counter /> */}
 
-      // {/* <Theme /> */}
+// {/* <Theme /> */}
 
-      // {/* <Form /> */}
-      // {/* <p>{name}</p>
-      // <p>{email}</p>
-      // <p>{password}</p> */}
+// {/* <Form /> */}
+// {/* <p>{name}</p>
+// <p>{email}</p>
+// <p>{password}</p> */}
 
-      
 //     </div>
 //   );
 // }
 
 // export default App;
-
 
 // //User Management
 // import React, { useState } from "react";
@@ -43,8 +41,8 @@
 //         <nav className="mb-4">
 //           <Link to="/" className="btn btn-primary mr-2">Home</Link>
 //           <Link to="/users" className="btn btn-secondary">User List</Link>
-//           <button 
-//                 className="btn btn-success" 
+//           <button
+//                 className="btn btn-success"
 //                 onClick={() => setShowForm(!showForm)}
 //               >
 //                 {showForm ? "Hide Form" : "Add User"}
@@ -69,29 +67,52 @@
 
 // export default App;
 
+// //CRUD APP ---------------------------------------------------
+// import React from 'react'
+// import { Route, BrowserRouter, Routes } from "react-router-dom";
+// import Home from './Components/CRUD/Home'
+// import Create from './Components/CRUD/Create';
+// import Edit from './Components/CRUD/Edit';
 
-//CRUD APP
-import React from 'react'
-import { Route, BrowserRouter, Routes } from "react-router-dom";
-import Home from './Components/CRUD/Home'
-import Create from './Components/CRUD/Create';
-import Edit from './Components/CRUD/Edit';
+// function App() {
+//   return (
+//     <div>
+//       <BrowserRouter>
+//       <Routes>
+//         <Route path='/' element={<Home/>}></Route>
+//         <Route path='/create' element={<Create/>}></Route>
+//         <Route path='/edit/:id' element={<Edit/>}></Route>
+//       </Routes>
+//       </BrowserRouter>
+//     </div>
+//   )
+// }
 
-function App() {
+// export default App
+
+import React, { useState } from "react";
+import EditProduct from "./Components/Food Product Management System/EditProduct";
+import AddProduct from "./Components/Food Product Management System/AddProduct";
+import ProductList from "./Components/Food Product Management System/ProductList";
+
+const App = () => {
+  const [editingProduct, setEditingProduct] = useState(null);
   return (
-    <div>
-      <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Home/>}></Route>
-        <Route path='/create' element={<Create/>}></Route>
-        <Route path='/edit/:id' element={<Edit/>}></Route>
-      </Routes>
-      </BrowserRouter>
+    <div className="container mt-5">
+      <h1 className="text-center">Food Product Management System</h1>
+      {editingProduct ? (
+        <EditProduct
+          product={editingProduct}
+          onSave={() => setEditingProduct(null)}
+        />
+      ) : (
+        <>
+          <AddProduct />
+          <ProductList onEdit={(product) => setEditingProduct(product)} />
+        </>
+      )}
     </div>
-  )
-}
+  );
+};
 
-export default App
-
-
-
+export default App;

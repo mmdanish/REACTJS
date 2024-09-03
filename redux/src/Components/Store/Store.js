@@ -3,7 +3,7 @@
 // import FormSlice from "../Form/FormSlice";
 
 import { configureStore } from "@reduxjs/toolkit";
-import userSlice from "../CRUD/userSlice";
+import FoodProductSlice from "../Food Product Management System/FoodProductSlice";
 
 
 //Counter -------------------------------------
@@ -32,10 +32,19 @@ import userSlice from "../CRUD/userSlice";
 
 
 //Add User -------------------------------------
+// const store = configureStore({
+//   reducer: {
+//     users: userSlice,
+//   }
+// })
+
+// export default store;
+
+// Food Product Management System--------------------------------
 const store = configureStore({
   reducer: {
-    users: userSlice,
+    foodProducts: FoodProductSlice
   }
 })
 
-export default store;
+export default store
