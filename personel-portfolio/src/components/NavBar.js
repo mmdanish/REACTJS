@@ -1,9 +1,12 @@
 import React from 'react'
-import { useState } from 'react'
-import { Navbar, Container } from 'react-bootstrap'
+import { useState, useEffect } from 'react'
+import { Navbar, Container, Nav } from 'react-bootstrap'
+import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
 import navIcon3 from '../assets/img/nav-icon3.svg';
+import { HashLink } from 'react-router-hash-link';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 
 const NavBar = () => {
@@ -28,6 +31,7 @@ const NavBar = () => {
         setActiveLink(value);
     }
   return (
+    <Router>
     <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
           <Navbar.Brand href="/">
@@ -55,6 +59,7 @@ const NavBar = () => {
           </Navbar.Collapse>
         </Container>
       </Navbar>
+    </Router>
   )
 }
 
